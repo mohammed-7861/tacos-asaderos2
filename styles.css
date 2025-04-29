@@ -1,0 +1,432 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e74c3c;
+}
+
+.order-btn {
+    background-color: #e74c3c;
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #c0392b;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    color: #333;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #e74c3c;
+}
+
+/* Hero Section */
+/* Hero Section - try these different variations */
+/* Hero Section */
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: url('images/home.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Darkens the image slightly */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+}
+.hero-content {
+    padding: 2rem;
+}
+
+.hero-logo {
+    width: 200px;
+    margin-bottom: 2rem;
+    object-fit: contain;
+    /* Add these new properties */
+    filter: drop-shadow(0 0 10px rgba(10, 10, 10, 10));
+    background-color: rgb(255, 255, 255);
+    padding: 1px;
+    border-radius: 1px;
+    backdrop-filter: blur(.001px);
+    -webkit-backdrop-filter: blur(.001px);
+}
+
+/* Optional: Add hover effect */
+.hero-logo:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 10);
+}
+
+.spanish-tagline {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 50);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.english-tagline {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 50);
+}
+
+/* Featured Items Section */
+.featured-items {
+    padding: 4rem 5%;
+    background-color: white;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 5%;
+}
+
+.featured-item {
+    text-align: center;
+    transition: transform 0.6s ease;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.featured-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+    transform: scale(1.0);  /* Removed zoom to maintain clarity */
+    backface-visibility: hidden;  /* Helps with image sharpness */
+    max-width: 100%;
+    display: block;
+}
+
+.featured-item:hover img {
+    transform: scale(1.05);
+}
+
+.featured-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: white;
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 4rem 5%;
+    background-color: white;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.menu-category {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-category h3 {
+    color: #e74c3c;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 0.5rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.item-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.item-price {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+/* About Section */
+.about-section {
+    padding: 4rem 5%;
+    background-color: white;
+    color: #333;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin: 2rem auto;
+    display: block;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 4rem 5%;
+    background-color: #f9f9f9;
+}
+
+.contact-info {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.hours {
+    margin-top: 2rem;
+}
+
+.hours h3 {
+    color: #e74c3c;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: white;
+    color: #333;
+    padding: 2rem 5%;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    height: 60px;
+    margin-bottom: 1rem;
+    object-fit: contain;
+}
+
+.footer-social {
+    margin: 1rem 0;
+}
+
+.footer-social .social-icon {
+    color: #333;
+    margin: 0 0.5rem;
+}
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e74c3c;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-size: 20px;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Image Loading Effect */
+.featured-item img {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.featured-item img.loaded {
+    opacity: 1;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        margin-top: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .spanish-tagline,
+    .english-tagline {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* ... your existing CSS ... */
+
+/* Fan Favorites Styling */
+.menu-category:first-child {
+    background-color: #fff5f5;
+    border: 2px solid #e74c3c;
+}
+
+.menu-category:first-child h3 {
+    color: #e74c3c;
+    font-size: 2rem;
+}
+
+.menu-category:first-child .menu-item:hover {
+    background-color: rgba(231, 76, 60, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* ... your existing responsive CSS ... */
+}
